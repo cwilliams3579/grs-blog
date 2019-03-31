@@ -1,0 +1,28 @@
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+<% if current_user %>
+  <%= form_with model: [@post, @comment] do |f| %>
+    <%= f.text_field :body %>
+  <%= f.submit "Comment" %>
+<% end %>
+
+<% else %>
+<p>You need to <%= link_to 'Login', new_user_session_path %> before you can comment!</p>
+
+<% end %>
+
+<div id="comment_pane">
+  <% @comments.each do |comment| %>
+    <%= render "comments/comment", comment: comment %>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
