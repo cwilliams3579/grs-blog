@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
   <head>
-    <title>GrsBlog</title>
+    <title>Generations Rehab Services</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'track' %>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'false' %>
+  
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/alerts' %>
     <%= yield %>
+    <%#= render 'layouts/footer' %>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   </body>
 </html>

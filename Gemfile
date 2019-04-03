@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby '2.6.0'
+ruby '2.5.3'
 gem 'rails', '~> 5.2.3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks', '~> 2.1'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -31,6 +32,8 @@ gem 'high_voltage'
 gem 'simple_form', '~> 4.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'bullet', '~> 5.9'
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
+# gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 # gem 'webpacker', '~> 4.0', '>= 4.0.2'
 gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 gem 'jquery-rails'

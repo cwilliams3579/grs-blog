@@ -16,4 +16,8 @@ module GrsBlog
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+  
+  # Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
+  #   config.assets.paths << path
+  # end
 end
